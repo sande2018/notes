@@ -1,0 +1,17 @@
+#include <stdio.h>
+main(){
+for(;;){ 
+	printf("请设置新密码:");
+	int n;
+	char key[100];
+	scanf("%s",&key);
+ 	for(n=0;key[n]!='\0';n++);//----判断key的长度
+	if(n>=8){
+	printf("密码设置成功\n")	;
+	break;
+	} else{
+	printf("密码过于简单，请重新设置\n");
+	} 
+} 
+	getchar();
+}
