@@ -1,21 +1,17 @@
 package wok;
 import wok.Car;
 import wok.Truck;
-import wok.Vehicle;;
-
-public abstract class test {
+public class test {
 	
 	public static void main(String[] args) {
-		Vehicle a1=new Vehicle("A001","Truck",53.50);
-		Vehicle a2=new Vehicle("A002","Car",85.50);
-		Truck a3=new Truck();
-		Car a4=new Car();
-		
-		System.out.println(a1.getinformation()+a3.getToll(a1._distance));
-		System.out.println(a2.getinformation()+a4.getToll(a2._distance));
+		Truck a3=new Truck("A001","Truck",53.50);
+		Car a4=new Car("A002","Car",85.50);
+		System.out.printf("%s%s\n",a3.getinformation(),a3.getToll(a3._distance));
+		System.out.printf("%s%s\n",a4.getinformation(),a4.getToll(a4._distance));
 		
 	}
 }
+
 
 
 
@@ -44,11 +40,14 @@ public class Vehicle {
 
 
 
-
-
 package wok;
 
-public class Truck {
+public class Truck extends Vehicle{
+	public Truck(String _ID, String _type, double _distance) {
+		super(_ID, _type, _distance);
+		
+	}
+
 	public double _price=0.38;
 
 	public String getToll(double _distance) {
@@ -63,13 +62,13 @@ public class Truck {
 
 
 
-
-
-
-
 package wok;
 
-public class Car {
+public class Car extends Vehicle{
+	public Car(String _ID, String _type, double _distance) {
+		super(_ID, _type, _distance);
+	}
+
 	public double _price=0.28;
 	
 	public String getToll(double _distance){
