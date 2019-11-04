@@ -1,7 +1,7 @@
 -----------UserExceptionDemo.java---------------------
 package P151_7_5_2;
 
-import P151_7_5_2.Member;;;
+import P151_7_5_2.Member;
 
 public class UserExceptionDemo {
 
