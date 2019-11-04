@@ -13,7 +13,7 @@ public class demo {
 		try {
 			w.triangle(a, b, c);
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			System.err.println(e.getMessage());
 		}
 	}
 }
