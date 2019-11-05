@@ -22,9 +22,11 @@ package P151_7_2;
 
 public class triangle extends demo{
 	public void triangle(int a, int b, int c) throws Exception {
-		if ( a+b>c && a+c>b && b+c>a) {
+		if(a<=0 || b<=0 || c<=0) {
+			throw new Exception("不能组成三角形");
+		}else if ( a+b>c && a+c>b && b+c>a) {
 			System.out.println("可以组成三角形");
-		} else {
+		}else {
 			throw new Exception("不能组成三角形");
 		}
 	}
