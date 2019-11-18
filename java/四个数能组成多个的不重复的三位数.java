@@ -14,6 +14,7 @@ public class Demo_01 {
 				}
 			}
 		}
+			System.out.printf("一共有%d组\n",count);
 	}
 
 }
