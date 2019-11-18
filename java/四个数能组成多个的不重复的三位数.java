@@ -20,6 +20,41 @@ public class Demo_01 {
 }
 
 --------------------------------------------------------------
+package Demo_02;
+
+import java.util.Scanner;
+
+public class Demo_02 {
+	/*输入某年某月某日，判断这一天是这一年的第几天？*/
+	public static void main(String[] args) {
+		int datetime[]=new int[3];
+		int day=0,month;
+		Scanner sc=new Scanner(System.in);
+		System.out.print("请输入 年:");
+		datetime[0]=sc.nextInt();
+		System.out.print("请输入 月:");
+		datetime[1]=sc.nextInt();
+		System.out.print("请输入 日:");
+		datetime[2]=sc.nextInt();
+		for (int i = 1; i < datetime[1]+1; i++) {
+			if (i==1||i==3||i==5||i==7||i==8||i==10||i==12) {
+				 day+=31;
+			}else if(i==2){
+				if (datetime[0]%4==0 && datetime[0]%100==0) {
+					day+=28;
+				}else {
+					day+=29;
+				}
+			}else {
+				day+=30;
+			}
+		}
+		
+	}
+
+}
+	
+--------------------------------------------------------------
 package Demo_03;
 
 import java.util.Arrays;
