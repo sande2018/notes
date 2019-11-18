@@ -36,7 +36,7 @@ public class Demo_02 {
 		datetime[1]=sc.nextInt();
 		System.out.print("请输入 日:");
 		datetime[2]=sc.nextInt();
-		for (int i = 1; i < datetime[1]+1; i++) {
+		for (int i = 1; i < datetime[1]; i++) {
 			if (i==1||i==3||i==5||i==7||i==8||i==10||i==12) {
 				 day+=31;
 			}else if(i==2){
@@ -49,11 +49,11 @@ public class Demo_02 {
 				day+=30;
 			}
 		}
-		
+		System.out.printf("这一天是今年的第%d天",day+datetime[2]);
 	}
 
 }
-	
+
 --------------------------------------------------------------
 package Demo_03;
 
