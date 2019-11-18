@@ -44,3 +44,19 @@ public class Demo_03 {
 		}
 	}
 }
+
+--------------------------------------------------------------
+package Demo_04;
+
+public class Demo_04 {
+	/*输出9*9口诀*/
+	public static void main(String[] args) {
+		int x,y=0;
+		for (x = 1; x < 10; x++) {
+			for (y = 1; y <= x; y++) {
+				System.out.printf("%d×%d=%d ",x,y,x*y);
+			}
+			System.out.println();
+		}
+	}
+}
