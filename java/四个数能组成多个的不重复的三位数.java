@@ -30,12 +30,44 @@ public class Demo_02 {
 		int datetime[]=new int[3];
 		int day=0,month;
 		Scanner sc=new Scanner(System.in);
-		System.out.print("请输入 年:");
-		datetime[0]=sc.nextInt();
-		System.out.print("请输入 月:");
-		datetime[1]=sc.nextInt();
-		System.out.print("请输入 日:");
-		datetime[2]=sc.nextInt();
+		for(;;) {
+			System.out.print("请输入 年:");
+			datetime[0]=sc.nextInt();
+			System.out.print("请输入 月:");
+			datetime[1]=sc.nextInt();
+			month = datetime[1];
+			System.out.print("请输入 日:");
+			datetime[2]=sc.nextInt();
+			if(datetime[0]<=9999 && datetime[0]>=1840){
+				if(month>=1 && month <=12) {
+						if(month==1||month==3||month==5||month==7||month==8||month==10||month==12) {
+							if(datetime[2]<1 || datetime[2]>31)
+							System.out.println("日期中的‘日’格式错误");
+							else break;
+						}else if(month==2){
+							if (datetime[0]%4==0 && datetime[0]%100==0) {
+								if(datetime[2]<1 || datetime[2]>28)
+								System.out.println("日期中的‘日’格式错误");
+								else break;
+							}else{
+								if(datetime[2]<1 || datetime[2]>29)
+								System.out.println("日期中的‘日’格式错误");
+								else break;
+							}
+						}else {
+							if(datetime[2]<1 || datetime[2]>30)
+								System.out.println("日期中的‘日’格式错误");
+								else break;
+						}
+				}else {
+					System.out.println("日期中的‘月’格式错误");
+				}
+			}else {
+				System.out.println("日期中的‘年’格式错误");
+			}
+
+		}
+
 		for (int i = 1; i < datetime[1]; i++) {
 			if (i==1||i==3||i==5||i==7||i==8||i==10||i==12) {
 				 day+=31;
