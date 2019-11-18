@@ -42,28 +42,28 @@ public class Demo_02 {
 				if(month>=1 && month <=12) {
 						if(month==1||month==3||month==5||month==7||month==8||month==10||month==12) {
 							if(datetime[2]<1 || datetime[2]>31)
-							System.out.println("日期中的‘日’格式错误");
+							System.out.printf("日期中的‘日’格式错误\n\n");
 							else break;
 						}else if(month==2){
 							if (datetime[0]%4==0 && datetime[0]%100==0) {
 								if(datetime[2]<1 || datetime[2]>28)
-								System.out.println("日期中的‘日’格式错误");
+								System.out.printf("日期中的‘日’格式错误\n\n");
 								else break;
 							}else{
 								if(datetime[2]<1 || datetime[2]>29)
-								System.out.println("日期中的‘日’格式错误");
+								System.out.printf("日期中的‘日’格式错误\n\n");
 								else break;
 							}
 						}else {
 							if(datetime[2]<1 || datetime[2]>30)
-								System.out.println("日期中的‘日’格式错误");
+								System.out.printf("日期中的‘日’格式错误\n\n");
 								else break;
 						}
 				}else {
-					System.out.println("日期中的‘月’格式错误");
+					System.out.printf("日期中的‘月’格式错误\n\n");
 				}
 			}else {
-				System.out.println("日期中的‘年’格式错误");
+				System.out.printf("日期中的‘年’格式错误\n\n");
 			}
 
 		}
@@ -85,7 +85,6 @@ public class Demo_02 {
 	}
 
 }
-
 --------------------------------------------------------------
 package Demo_03;
 
