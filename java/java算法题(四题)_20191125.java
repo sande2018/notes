@@ -44,7 +44,7 @@ public class Demo_03 {
 	/*打印所有的水仙花数，指的是一个三位数，每位数字的立方和等于其本身*/
 	public static void main(String[] args) {
 		int a,b,c;
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 100; i < 1000; i++) {
 			//取百位
 			a=i/100;
 			//取十位
