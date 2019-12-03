@@ -1,4 +1,29 @@
-//1、输入2个正整数，求其最大公约数和最小公倍数
+import java.util.Scanner;
+
+public class Demo_01 {
+	//1、输入2个正整数，求其最大公约数和最小公倍数
+	public static void main(String[] args) {
+		int a,b,c,d,temp,r,n;
+		Scanner input=new Scanner(System.in);
+		System.out.print("请输入2个正整数（用空格隔开）：");
+		a=c=input.nextInt();
+		b=d=input.nextInt();
+		if (a<b) {
+			temp=b;
+			b=a;
+			a=temp;
+		}
+		r=a%b;
+		n=a*b;
+		while (r!=0) {
+			a=b;
+			b=r;
+			r=a%b;
+		}
+		System.out.printf("%d和%d的最大公约数是%d,最小公倍数是%d\n",c,d,b,n/b);
+	}
+}
+
 
 -------------------------------------------------------------------
 public class Demo_02 {
