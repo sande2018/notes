@@ -6,7 +6,7 @@
 public class Demo_03 {
 	/*一个球从100米处自由下落，每次落地后反弹回原来高度的一半，再落下，求在第十次落地时，共经过多少米？第十次反弹多高？*/
 	public static void main(String[] args) {
-		double m=100.00000000,sum=100.00000000;
+		double m=100.000000,sum=100.000000;
 		int i;
 		m/=2;
 		sum+=m*2;
