@@ -55,7 +55,7 @@ public class test2 {
 
 ---------------------------------------------------
 public class test3 {
-	//冒泡排序
+	//冒泡排序组合1
 	public static void main(String[] args) {
 		int i,j,n,k,w=0,ww=0,lastExchangeIndex=0;
 		int a[] = new int[] {3,4,2,1,5,6,7,8};//新建数组
@@ -75,6 +75,46 @@ public class test3 {
 				}
 			}
 			n=lastExchangeIndex;
+			if (is) {
+				break;
+			}
+		}
+		System.out.printf("外循环执行了%d次,内循环执行了%d次\n",w,ww);
+		for (int l = 0; l < a.length; l++) {
+			System.out.print(a[l]+"  ");
+		}
+	}
+}
+---------------------------------------------------
+public class test4 {
+	//冒泡排列组合2
+	public static void main(String[] args) {
+		int k,w=0,ww=0;
+		int a[] = new int[] {2,3,4,5,6,7,8,1};//新建数组
+		for (int i = 0; i < a.length/2; i++) {
+			boolean is=true;//用于优化内存占用
+			//把大的数往后挪，每一轮确定一个最大的数
+			w++;//外循环计数器
+			for (int j = 0; j < a.length-1-i; j++) {
+				ww++;//内循环计数器
+				if (a[j]>a[j+1]) {
+					k=a[j];//k用于交换
+					a[j]=a[j+1];
+					a[j+1]=k;
+					is=false;
+				}
+			}
+			if (is) {
+				break;
+			}
+			for (int j = a.length-i-1; j >i; j--) {
+				if (a[j]<a[j-1]) {
+					k=a[j];//k用于交换
+					a[j]=a[j-1];
+					a[j-1]=k;
+					is=false;
+				}
+			}
 			if (is) {
 				break;
 			}
