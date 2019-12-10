@@ -51,3 +51,37 @@ public class test2 {
 		System.out.printf("\n%d以内的素数一共有%d个",max,num);
 	}
 }
+
+
+---------------------------------------------------
+public class test3 {
+	//冒泡排序
+	public static void main(String[] args) {
+		int i,j,n,k,w=0,ww=0,lastExchangeIndex=0;
+		int a[] = new int[] {3,4,2,1,5,6,7,8};//新建数组
+		n = a.length-1;//用于优化内存占用
+		for (i = 0; i < a.length-1; i++) {
+			boolean is=true;//用于优化内存占用
+			//把大的数往后挪，每一轮确定一个最大的数
+			w++;//外循环计数器
+			for (j = 0; j < n; j++) {
+				ww++;//内循环计数器
+				if (a[j]>a[j+1]) {
+					k=a[j];//k用于交换
+					a[j]=a[j+1];
+					a[j+1]=k;
+					is=false;
+					lastExchangeIndex = j;//记下最后一次调换的位置
+				}
+			}
+			n=lastExchangeIndex;
+			if (is) {
+				break;
+			}
+		}
+		System.out.printf("外循环执行了%d次,内循环执行了%d次\n",w,ww);
+		for (int l = 0; l < a.length; l++) {
+			System.out.print(a[l]+"  ");
+		}
+	}
+}
